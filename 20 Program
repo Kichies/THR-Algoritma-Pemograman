@@ -1,0 +1,580 @@
+1.) Bilangan positif (for)
+
+#include <iostream>
+
+int main() {
+  int total = 0;
+  for (int i = 0; i <= 50; i++) {
+    total += i;
+  }
+  std::cout << "Total bilangan bulat positif 0 - 50: " << total << std::endl;
+  return 0;
+}
+
+2.)Bilangan genap (while-do)
+
+#include <iostream>
+
+int main() {
+  int total = 0, i = 0;
+  do {
+    if (i % 2 == 0) {
+      total += i;
+    }
+    i++;
+  } while (i <= 50);
+  std::cout << "Total bilangan genap  0 - 50: " << total << std::endl;
+  return 0;
+}
+
+
+3.)Bilangan ganjil (while-do)
+
+#include <iostream>
+
+int main() {
+  int total = 0, i = 1;
+  do {
+    total += i;
+    i += 2;
+  } while (i <= 50);
+  std::cout << "Total bilangan ganjil 0 -i 50: " << total << std::endl;
+  return 0;
+}
+
+
+4.)Input penjumlahan bilangan (do-while)
+
+#include <iostream>
+
+int main() {
+  int total = 0, num;
+  do {
+    std::cout << "Masukkan bilangan: ";
+    std::cin >> num;
+    total++;
+  } while (num != 0);
+  std::cout << "Total bilangan yang diinputkan: " << total - 1 << std::endl;
+  return 0;
+}
+
+
+5.)Input penjumlahan bilangan genap (while-do)
+
+#include <iostream>
+
+int main() {
+  int total = 0, num;
+  do {
+    std::cout << "Masukkan bilangan genap: ";
+    std::cin >> num;
+    if (num % 2 == 0) {
+      total++;
+    }
+  } while (num != 0);
+  std::cout << "Total bilangan genap yang diinputkan: " << total << std::endl;
+  return 0;
+}
+
+
+6.)Rata rata bilangan yang di input (for)
+
+#include <iostream>
+
+int main() {
+  int total = 0, num, count = 0;
+  for (int i = 1; i <= 3; i++) {
+    std::cout << "Masukkan bilangan ke-" << i << ": ";
+    std::cin >> num;
+    total += num;
+    count++;
+  }
+  float avg = (float)total / count;
+  std::cout << "Rata-rata bilangan yang diinputkan: " << avg << std::endl;
+  return 0;
+}
+
+
+7.)Menu maknan.
+
+#include <iostream>
+
+int main() {
+  int pilihan;
+  do {
+
+    std::cout << "====== Menu Makanan ======" << std::endl;
+    std::cout << "1. Nasi goreng" << std::endl;
+    std::cout << "2. Nasi uduk" << std::endl;
+    std::cout << "3. Mie Goreng" << std::endl;
+    std::cout << "4. Keluar" << std::endl;
+
+    std::cout << "Silahkan pilih! (1-4): ";
+    std::cin >> pilihan;
+
+    switch (pilihan) {
+      case 1:
+        std::cout << "Anda memilih Nasi Goreng." << std::endl;
+        break;
+      case 2:
+        std::cout << "Anda memilih Nasi Uduk." << std::endl;
+        break;
+      case 3:
+        std::cout << "Anda memilih Mie Goreng." << std::endl;
+        break;
+      case 4:
+        std::cout << "Terima kasih telah memesan!" << std::endl;
+        break;
+      default:
+        std::cout << "Pilihan tidak valid! Pilihlah angka 1-4." << std::endl;
+    }
+  } while (pilihan != 4); 
+
+  return 0;
+}
+
+
+8.)Mencari bilangan terbesar
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  int a, b;
+
+  cout << "Masukkan bilangan ke-1: ";
+  cin >> a;
+
+  cout << "Masukkan bilangan ke-2: ";
+  cin >> b;
+
+  if (a > b) {
+    cout << "Bilangan terbesar adalah " << a << endl;
+  } else if (a < b) {
+    cout << "Bilangan terbesar adalah " << b << endl;
+  } else {
+    cout << "Kedua bilangan sama besar" << endl;
+  }
+
+  return 0;
+}
+
+
+9.)Keterangan bilangan
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  int bilangan;
+
+  cout << "Masukkan bilangan: ";
+  cin >> bilangan;
+
+  if (bilangan > 0) {
+    cout << "Bilangan positif" << endl;
+  } else if (bilangan < 0) {
+    cout << "Bilangan negatif" << endl;
+  } else {
+    cout << "Nol" << endl;
+  }
+
+  return 0;
+}
+
+
+10.)Wujud air
+
+int main() {
+  float temperatur;
+
+  cout << "Masukkan temperatur air(°C): ";
+  cin >> temperatur;
+
+  if (temperatur <= 0) {
+    cout << "Wujud air: padat (es)" << endl;
+  } else if (temperatur < 100) {
+    cout << "Wujud air: cair" << endl;
+  } else {
+    cout << "Wujud air: gas (uap)" << endl;
+  }
+
+  return 0;
+}
+
+
+11.)Menghitung gaji
+import java.util.Scanner;
+
+public class gaji {
+   public static void main(String[] args) {
+
+
+       Scanner input = new Scanner(System.in);
+       String nama;
+       char gol;
+       int totalGaji, gajiPerJam = 0;
+
+
+       System.out.print("Masukkan nama Karyawan : ");
+       nama = input.nextLine();
+
+
+       System.out.print("Masukkan jenis Golongan (A/B/C/D) : ");
+       gol = input.next().charAt(0);
+
+
+       System.out.print("Masukkan total jam kerja dalam seminggu : ");
+       int jamKerja = input.nextInt();
+
+
+       switch (gol) {
+           case 'A':
+               gajiPerJam = 5000;
+               break;
+           case 'B':
+               gajiPerJam = 7000;
+               break;
+           case 'C':
+               gajiPerJam = 8000;
+               break;
+           case 'D':
+               gajiPerJam = 10000;
+               break;
+           default:
+               System.out.println("Golongan tidak valid. Harap masukkan A, B, C, atau D.");
+               return;
+       }
+
+
+       if (jamKerja <= 48) {
+           totalGaji = jamKerja * gajiPerJam;
+       } else {
+           int lembur = jamKerja - 48;
+           int gajiLembur = lembur * 4000;
+           totalGaji = 48 * gajiPerJam + gajiLembur;
+       }
+
+
+       System.out.println(nama + " menerima upah Rp. " + totalGaji + " per minggu");
+   }
+}
+
+
+12.)Menghitung luas bangun.
+import java.util.Scanner;
+
+class data {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+System.out.println("=======Luas Persegi=======");
+System.out.println();
+
+System.out.println("Masukkan Sisi Persegi:  ");
+double sisi = input.nextDouble();
+
+double luas = sisi * sisi;
+System.out.println("Luas persegi adalah:  " + luas);
+
+System.out.println("=======Luas Segitiga=======");
+System.out.println();
+
+System.out.println("Masukkan alas segitiga: ");
+double alas = input.nextDouble();
+
+System.out.println("Masukkan tinggi segitiga: ");
+double tinggi = input.nextDouble();
+
+double luas2 = alas * tinggi / 2;
+System.out.println("Luas segitiga adalah: " + luas2);
+
+System.out.println("=======Luas Lingkaran=======");
+System.out.println();
+
+System.out.println("Masukkan jari-jari lingkaran: ");
+int r = input.nextInt();
+
+double phi = 3.14;
+
+double luas3 = phi*r*r;
+System.out.println("Luas lingkaran adalah: " + luas3);
+
+    }
+  }
+
+
+13.)Pengulangan kata
+import java.util.Scanner;
+
+public class ulangKata {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Masukkan kata yang ingin diulang: ");
+        String kata = input.nextLine();
+        System.out.print("Masukkan jumlah pengulangan: ");
+        int n = input.nextInt();
+
+        System.out.println("Perulangan For:");
+        for (int i = 0; i < n; i++) {
+            System.out.println(kata);
+        }
+
+        System.out.println("Perulangan While:");
+        int i = 0;
+        while (i < n) {
+            System.out.println(kata);
+            i++;
+        }
+
+        System.out.println("Perulangan Do-While:");
+        i = 0;
+        do {
+            System.out.println(kata);
+            i++;
+        } while (i < n);
+    }
+}
+
+
+14.)Segitiga bintang
+import java.util.Scanner;
+
+class SegitigaBintang {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Masukkan tinggi segitiga: ");
+        int tinggi = input.nextInt();
+        System.out.println();
+
+       // atas
+        for (int i = 1; i <= tinggi; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+        System.out.println();
+
+        // bawah
+        for (int i = tinggi; i >= 1; i--) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+15.)Menghitung bangun datar
+import java.util.Scanner;
+
+class BangunDatar {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("====== Program Menghitung Bangun Datar ======");
+        System.out.println("1. Persegi");
+        System.out.println("2. Segitiga");
+        System.out.println("3. Lingkaran");
+
+        System.out.print("Silahkan pilih (1/2/3) : ");
+        int pilihan = input.nextInt();
+
+        switch (pilihan) {
+            case 1:
+                hitungPersegi();
+                break;
+            case 2:
+                hitungSegitiga();
+                break;
+            case 3:
+                hitungLingkaran();
+                break;
+            default:
+                System.out.println("Pilihan tidak valid!");
+        }
+    }
+
+    public static void hitungPersegi() {
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("====== Menghitung Persegi ======");
+        System.out.print("Masukan panjang sisi : ");
+        double sisi = input.nextDouble();
+
+        double luas = sisi * sisi;
+        double keliling = 4 * sisi;
+
+        System.out.println("Luas perseginya adalah " + luas + ".");
+        System.out.println("Keliling perseginya adalah " + keliling + ".");
+    }
+
+    public static void hitungSegitiga() {
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("====== Menghitung Segitiga ======");
+        System.out.print("Masukan alas : ");
+        double alas = input.nextDouble();
+        System.out.print("Masukan tinggi : ");
+        double tinggi = input.nextDouble();
+
+        double luas = 0.5 * alas * tinggi;
+        double sisiMiring = Math.sqrt(Math.pow(alas, 2) + Math.pow(tinggi, 2));
+        double keliling = alas + tinggi + sisiMiring;
+
+        System.out.println("Luas segitiganya adalah " + luas + ".");
+        System.out.println("Keliling segitiganya adalah " + keliling + ".");
+    }
+
+    public static void hitungLingkaran() {
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("====== Menghitung Lingkaran ======");
+        System.out.print("Masukan jari-jari : ");
+        double jariJari = input.nextDouble();
+
+        double luas = Math.PI * Math.pow(jariJari, 2);
+        double keliling = 2 * Math.PI * jariJari;
+
+        System.out.println("Luas lingkarannya adalah " + luas + ".");
+        System.out.println("Keliling lingkarannya adalah " + keliling + ".");
+    }
+}
+
+
+16.)Penjumlahan Matriks
+public class penjMat {
+    public static void main(String[] args) {
+        
+        int[][] matriks1 = {
+            {2, 5, 3},
+            {4, 1, 6}
+        };
+
+        
+        int[][] matriks2 = {
+            {1, 4, 3},
+            {3, 2, 1}
+        };
+
+    
+        int baris = matriks1.length;
+        int kolom = matriks1[0].length;
+
+        int[][] hasil = new int[baris][kolom];
+
+        // Melakukan penjumlahan matriks
+        for (int i = 0; i < baris; i++) {
+            for (int j = 0; j < kolom; j++) {
+                hasil[i][j] = matriks1[i][j] + matriks2[i][j];
+            }
+        }
+   
+        System.out.println("=== PENJUMLAHAN MATRIK ===");
+        System.out.println("\nMATRIK 1");
+        tampilkanMatriks(matriks1);
+
+        System.out.println("\nMATRIK 2");
+        tampilkanMatriks(matriks2);
+
+        System.out.println("\nHasil Penjumlahan Matrik 1 dan Matrik 2 adalah:");
+        tampilkanMatriks(hasil);
+    }
+
+
+    public static void tampilkanMatriks(int[][] matriks) {
+        for (int i = 0; i < matriks.length; i++) {
+            for (int j = 0; j < matriks[0].length; j++) {
+                System.out.print(matriks[i][j] + "   ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+17.)Input Data Mahasiswa
+import java.util.Scanner;
+
+
+public class tugas {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+
+
+
+        System.out.print("Masukkan Jumlah Mahasiswa: ");
+        int jum = input.nextInt();
+
+
+         int[]umurMhs = new int [jum];
+
+
+        for (int i = 0; i < jum; i++ ){
+        System.out.print("Umur Mahasiswa ke-" + (i+1) + " : ");
+        umurMhs [i] = input.nextInt();
+        }
+
+
+        System.out.println("=====================================");
+        System.out.println("Data Mahasiswa: ");
+
+
+        for (int i = 0; i < jum; i++)
+        System.out.println("Umur Mahasiswa ke-" + (i+1) + " : " + umurMhs[i] + " tahun");
+   
+
+
+    }
+}
+
+
+18.)Menghihitung kelulusan
+import java.util.Scanner;
+
+class data {
+    public static void main(String[] args) {
+    	
+        Scanner input = new Scanner(System.in);
+    	
+        System.out.print("NAMA        : ");
+        String nama = input.nextLine();
+        
+        System.out.print("NIM         : ");
+        int nim = input.nextInt();
+      
+        System.out.print("Nilai Tugas : ");
+        int tugas = input.nextInt();
+
+        System.out.print("Nilai UTS   : ");
+        int uts = input.nextInt();
+
+        System.out.print("Nilai UAS   : ");
+        int uas = input.nextInt();
+
+        float akh = (tugas*30f/100f) + (uts*30f/100f) + (uas*40f/100f);
+        System.out.print("Nilai Akhir : " + akh);
+
+       System.out.println();
+        
+         if (akh < 60) {
+      System.out.println("Anda Tidak Lulus.");
+    }
+    
+    else {
+      System.out.println("Anda Lulus.");
+    }
+  }
+}
+
+
+19.)
+
+20.)
